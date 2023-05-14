@@ -161,5 +161,7 @@ kubectl get pods -n <namespace-name>
 kubectl logs -f <pod-name> -n <namespace-name>
 ```
 
+In this setup of kubernetes cluster, we create one pod with two containers inside. The best practice is to create one pod with one container inside associated with one service. It's a simple setup to test our microservices with kubernetes.
+
 If you have any problem or sugestion, please contact me :
 - Email : [selim.bouhassatine@etu.u-pec.fr](mailto:selim.bouhassatine@etu.u-pec.fr)
