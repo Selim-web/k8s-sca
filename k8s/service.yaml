@@ -1,12 +1,17 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: service-order-service
-  namespace: order-service
-spec:
-  selector:
-    app.kubernetes.io/name: order-service
-  ports:
-    - name: order-port
-      protocol: TCP
-      port: 9001 # <--- Order service port
+apiVersion: v1 # This indicates the API version to use when creating this Kubernetes resource.
+
+kind: Service # This tells Kubernetes that we are creating a Service resource.
+
+metadata: # This block contains metadata about the Service.
+  name: service-order-service # The name of the Service.
+  namespace: order-service # The namespace in which the Service will be created.
+
+spec: # This block contains the specification of the Service.
+  selector: # The selector determines which pods are targeted by this Service.
+    app.kubernetes.io/name: order-service # The Service targets pods that have labels matching this key-value pair.
+
+  ports: # This is a list of ports that the Service exposes.
+    - name: order-port # The name of the port.
+      protocol: TCP # The network protocol for the port (TCP is the default).
+      port: 9001 # The port that the Service will listen on and forward.
+

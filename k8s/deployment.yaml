@@ -1,26 +1,34 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: order-service
-  namespace: order-service
-  labels:
-    app.kubernetes.io/name: order-service
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: order-service
-  template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: order-service
-    spec:
-      containers:
-        - name: redis
-          image: redis:alpine # <--- Redis image
-          ports:
-            - containerPort: 6379
-        - name: order-service
-          image: bselim/order-service:latest # <--- Order service image
-          ports:
-            - containerPort: 9001 
+apiVersion: apps/v1 # This indicates the API version to use when creating this Kubernetes resource.
+
+kind: Deployment # This tells Kubernetes that we are creating a Deployment resource.
+
+metadata: # This block contains metadata about the Deployment.
+  name: order-service # The name of the Deployment.
+  namespace: order-service # The namespace in which the Deployment will be created.
+  labels: # Labels are key-value pairs that can be used for identifying and grouping resources.
+    app.kubernetes.io/name: order-service # A label indicating the name of the application.
+
+spec: # This block contains the specification of the Deployment.
+  replicas: 2 # The number of pod replicas that should be maintained by this Deployment.
+
+  selector: # The selector determines which pods are managed by this Deployment.
+    matchLabels: # The Deployment manages pods that have labels matching these key-value pairs.
+      app.kubernetes.io/name: order-service # The key-value pair that the pod labels must match.
+
+  template: # This block defines the template for pods managed by this Deployment.
+    metadata: # Metadata for the pod.
+      labels: # Labels for the pod.
+        app.kubernetes.io/name: order-service # A label for the pod.
+
+    spec: # This block specifies the configuration for each pod.
+      containers: # Each pod can have one or more containers.
+
+        - name: redis # The name of the first container in the pod.
+          image: redis:alpine # The Docker image to use for this container.
+          ports: # The network ports that this container exposes.
+            - containerPort: 6379 # The port that the Redis server will listen on.
+
+        - name: order-service # The name of the second container in the pod.
+          image: bselim/order-service:latest # The Docker image to use for this container.
+          ports: # The network ports that this container exposes.
+            - containerPort: 9001 # The port that the Order service will listen on.
