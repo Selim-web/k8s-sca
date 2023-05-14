@@ -1,0 +1,8 @@
+com/palpashop/orderservice/dto/OrderRequest.class
+com/palpashop/orderservice/ressource/OrderController.class
+com/palpashop/orderservice/model/Order.class
+com/palpashop/orderservice/repository/OrderRepo.class
+com/palpashop/orderservice/OrderServiceApplication.class
+com/palpashop/orderservice/model/OrderLineItems.class
+com/palpashop/orderservice/dto/OrderLineItemsDto.class
+com/palpashop/orderservice/service/OrderService.class

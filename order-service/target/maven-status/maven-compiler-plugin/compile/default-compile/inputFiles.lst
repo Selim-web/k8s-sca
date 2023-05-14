@@ -1,0 +1,8 @@
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/repository/OrderRepo.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/model/OrderLineItems.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/dto/OrderLineItemsDto.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/model/Order.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/dto/OrderRequest.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/OrderServiceApplication.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/service/OrderService.java
+/Users/selimbouhassatine/Downloads/order-service/src/main/java/com/palpashop/orderservice/ressource/OrderController.java
