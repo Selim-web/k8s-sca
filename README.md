@@ -137,19 +137,19 @@ We suppose that kubenertes dashboard and ingress-nignx-controller are already in
 First of all, let's create the deployment of the order-service and cache. We create it in order-service namespace. We create 2 replicatSet. We can use this command to create the deployment : 
 
 ```bash
-kubectl apply -f deployment.yaml
+kubectl apply -f k8s/deployment.yaml
 ```
 
 After that, we need to create the service of the order-service and cache. We create it in order-service namespace. In this component, we specify the port and protocal. We can use this command to create the service : 
 
 ```bash
-kubectl apply -f service.yaml
+kubectl apply -f k8s/service.yaml
 ```
 
 After that, we need to create the ingress of the order-service. We can use this command to create the ingress : 
 
 ```bash
-kubectl apply -f ingress.yaml
+kubectl apply -f k8s/ingress.yaml
 ```
 
 After that, we go to the dashboard to see the result. We need to see 2 pods in the order-service namespace. One service and ingress in the order-service namespace. In the ingress, we need to see the host and path of the order-service.
@@ -161,5 +161,5 @@ kubectl get pods -n <namespace-name>
 kubectl logs -f <pod-name> -n <namespace-name>
 ```
 
-
-
+If you have any problem or sugestion, please contact me :
+- Email : [selim.bouhassatine@etu.u-pec.fr](mailto:selim.bouhassatine@etu.u-pec.fr)
