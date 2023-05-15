@@ -7,13 +7,13 @@ metadata: # This block contains metadata about the Ingress.
   namespace: order-service # The namespace in which the Ingress will be created.
   annotations: # Annotations are arbitrary non-identifying metadata.
     kubernetes.io/ingress.class: nginx # This annotation indicates that the NGINX Ingress controller should be used.
-    nginx.ingress.kubernetes.io/rewrite-target: /$1 # This annotation sets up URL rewriting, replacing the path matched by the regular expression in the path with the value specified here.
+    nginx.ingress.kubernetes.io/rewrite-target: / # This annotation sets up URL rewriting, replacing the path matched by the regular expression in the path with the value specified here.
 
 spec: # This block contains the specification of the Ingress.
   rules: # Each rule applies to a specific host (not included here, so applicable to any host) and a list of path patterns.
     - http: # This begins the definition of an HTTP rule.
         paths: # This is a list of paths that should match this rule.
-          - path: /order/(.*) # This is a regular expression that matches any path starting with "/order/".
+          - path: / # This is a regular expression that matches any path starting with "/order/".
             pathType: Prefix # This indicates that the path should be interpreted as a prefix. If the request path starts with the specified path, then it matches.
             backend: # This block defines the backend service to which matching requests should be routed.
               service: # This specifies the specific service to use
